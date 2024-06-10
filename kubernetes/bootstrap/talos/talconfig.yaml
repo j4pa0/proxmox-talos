@@ -6,13 +6,13 @@ talosVersion: v1.7.4
 kubernetesVersion: v1.30.1
 
 clusterName: "talos-cluster"
-endpoint: https://10.69.5.1:6443
+endpoint: https://10.69.0.100:6443
 clusterPodNets:
-  - "10.69.0.0/16"
+  - "10.90.0.0/16"
 clusterSvcNets:
   - "10.96.0.0/16"
 additionalApiServerCertSans: &sans
-  - "10.69.5.1"
+  - "10.69.0.100"
   - 127.0.0.1 # KubePrism
 additionalMachineCertSans: *sans
 
@@ -37,7 +37,7 @@ nodes:
             gateway: "10.69.0.1"
         mtu: 1500
         vip:
-          ip: "10.69.5.1"
+          ip: "10.69.0.100"
   - hostname: "talos-02"
     ipAddress: "10.69.0.24"
     installDisk: "/dev/sda"
@@ -54,8 +54,8 @@ nodes:
             gateway: "10.69.0.1"
         mtu: 1500
         vip:
-          ip: "10.69.5.1"
-  - hostname: "talos-01"
+          ip: "10.69.0.100"
+  - hostname: "talos-03"
     ipAddress: "10.69.0.26"
     installDisk: "/dev/sda"
     talosImageURL: factory.talos.dev/installer/88d1f7a5c4f1d3aba7df787c448c1d3d008ed29cfb34af53fa0df4336a56040b
@@ -71,7 +71,7 @@ nodes:
             gateway: "10.69.0.1"
         mtu: 1500
         vip:
-          ip: "10.69.5.1"
+          ip: "10.69.0.100"
 
 # Global patches
 patches:
