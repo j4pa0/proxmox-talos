@@ -1,0 +1,8 @@
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+  name: talos-pool
+  namespace: metallb-system
+spec:
+  addresses:
+  - 10.69.10.0/24
