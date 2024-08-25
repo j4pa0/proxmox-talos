@@ -44,6 +44,7 @@ bootstrap_node_inventory: []
 #   3. you are not force redirecting DNS requests to it - this will break cert generation over DNS01
 # If using multiple DNS servers make sure they are setup the same way, there is no
 #   guarantee that the first DNS server will always be used for every lookup.
+test
 bootstrap_dns_servers: []
 
 # (Optional) The NTP servers to use for the cluster nodes.
